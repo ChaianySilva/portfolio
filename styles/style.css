@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
+
+:root {
+ --cor-primaria:   #000000;
+ --cor-secundaria: #f6f6f6;
+ --cor-terciaria:  #22D4FD;
+ --cor-hover:      #1b1b1b;
+
+ --fonte-primaria: 'Krona One', sans-serif;
+ --fonte-secundaria: 'Montserrat', sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    box-sizing: border-box; /*Garante que elementos filhos não ultrapasse elementos pai dentro do body*/
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundaria);
+}
+
+
+.apresentacao{
+    padding: 5% 15%;
+    display: flex; /*deixa os elementos lado a lado na página*/
+    align-items: center; /*alinha os elemento no centro conforme a altura do maior item da linha, nesse caso é a imagem*/
+    justify-content: space-between; /*Distribui e alinha elementos filhos ao longo do eixo principal, de forma uniforme. O primeiro item é deslocado para o início do eixo principal,
+    o último é deslocado para o final do eixo principal e os demais são distribuídos uniformemente entre eles*/
+    gap: 82px;
+}
+.apresentacao__conteudo{
+    width: 50%;
+    display: flex; /*deixa os elementos lado a lado na página*/
+    flex-direction: column;
+    gap: 40px; /* cria um espaçamento entre os conteudos no flexbox*/
+}
+
+.apresentacao__conteudo__titulo{
+    font-size: 2,25rem;
+    font-family: var(--fonte-primaria);
+}
+
+.titulo-destaque{
+    color: var(--cor-terciaria);
+}
+
+.cabecalho{
+padding: 2% 0% 0% 15%;
+}
+
+.cabecalho__menu{
+    display: flex;
+    gap: 80px;
+}
+
+.cabecalho__menu__link{
+    font-family: var(--fonte-secundaria);
+    font-size: 1,5rem;
+    font-weight: 600;
+    color: var(--cor-terciaria);
+    text-decoration: none;
+}
+
+.apresentacao__conteudo__texto{
+    font-size: 1.5rem;
+    font-family: var(--fonte-secundaria);
+}
+.apresentacao__links{
+    display: flex; /*deixa os elementos lado a lado na página*/
+    flex-direction: column; /*faz com que os elementos do flexbox fiquem em coluna, pois por padrão o flex é na horizontal*/
+    justify-content: space-between;  /*Distribui e alinha elementos filhos ao longo do eixo principal, de forma uniforme. O primeiro item é deslocado para o início do eixo principal,
+    o último é deslocado para o final do eixo principal e os demais são distribuídos uniformemente entre eles*/
+    align-items: center; /*Centraliza os elementos verticamente, deixando os elementos com um espaço acima e abaixo*/
+    gap: 32px;
+}
+.apresentacao__links__subtitulo{
+    font-family: var(--fonte-primaria);
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+.apresentacao__links__navegacao{
+    display: flex;
+    justify-content: center; /*Centra os elementos horizontalmente, deixando os elementos com um espaço na esquerda e na direita*/
+    gap: 16px;
+    border: 2px solid var(--cor-terciaria);
+    width: 50%; /*largura do texto*/
+    text-align: center; /* alinha o texto*/
+    border-radius: 8px; /*arredonda as bordas*/
+    font-size: 1.5rem; /* tamanho da fonte*/
+    font-weight: 600; /*peso da fonte, define a grossura da fonte*/
+    padding: 21.5px 0; /*altera a distancia do conteudo para a borda*/
+    text-decoration: none; /*tira a decoração do link (sublinhado)*/
+    color: var(--cor-secundaria);
+    font-family: var(--fonte-secundaria);
+}
+.apresentacao__links__navegacao:hover{
+    background-color: var(--cor-hover);
+    padding: 3%;
+}
+
+.apresentacao__imagem{
+    width: 50%
+}
+.rodape{
+    color: var(--cor-primaria);
+    background-color: var(--cor-terciaria);
+    padding: 24px;
+    text-align: center;
+    font-family: var(--fonte-secundaria);
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+@media(max-width: 1200px ){
+    .cabecalho{
+        padding: 10%;
+    }
+    .cabecalho__menu{
+        justify-content: center;
+    }
+    .apresentacao{
+       flex-direction: column-reverse; 
+       padding: 5%;
+    }
+    .apresentacao__conteudo{
+        width: auto;
+    }
+}
